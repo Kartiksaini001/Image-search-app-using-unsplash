@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+:root {
+  --theme-light: #f2f2f2;
+  --theme-dark: #121212;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+#root,
+html {
+  background-color: var(--theme-light);
+}
+
+.App-header {
+  margin-top: 7rem;
+}
+
+.form-search {
+  width: 80vw;
+}
+
+.search-input {
+  height: 4.5rem;
+  width: 85%;
+  font-size: 17px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.search-input::placeholder {
+  color: rgba(66, 66, 66, 0.5);
+}
+
+.search-btn {
+  background-color: var(--theme-dark);
+  color: white;
+  width: 11%;
+  font-size: 21px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
