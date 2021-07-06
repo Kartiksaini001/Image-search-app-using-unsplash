@@ -2,17 +2,20 @@ import React, { Component } from "react";
 import { FaSearch } from "react-icons/fa";
 import { connect } from "react-redux";
 import { getImages } from "../actions/imageActions";
-import { updateQuery } from "../actions/searchbarActions";
 
 class SearchBar extends Component {
   state = {
     query: "random",
   };
+
   render() {
     const fetchImages = (e) => {
       e.preventDefault();
-      this.props.updateQuery(this.state.query);
-      this.props.getImages(this.state.query, this.props.per_page);
+      if (this.state.query === "")
+        this.setState({ query: "random" }, () => {
+          this.props.getImages(this.state.query);
+        });
+      else this.props.getImages(this.state.query);
     };
 
     const handleChange = (e) => {
@@ -41,10 +44,4 @@ class SearchBar extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  images: state.image.images,
-  per_page: state.search.per_page,
-  query: state.search.query,
-});
-
-export default connect(mapStateToProps, { getImages, updateQuery })(SearchBar);
+export default connect(null, { getImages })(SearchBar);

@@ -2,22 +2,23 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SearchBar from "./components/SearchBar";
 import DisplayImages from "./components/DisplayImages";
-import { Provider } from "react-redux";
-import store from "./store";
+import { connect } from "react-redux";
 
-function App() {
+const App = (props) => {
   return (
-    <Provider store={store}>
-      <div className="App">
-        <header className="App-header d-flex align-items-center justify-content-center">
-          <SearchBar />
-        </header>
-        <main className="main-wrapper">
-          <DisplayImages />
-        </main>
-      </div>
-    </Provider>
+    <div className="App">
+      <header className="App-header d-flex align-items-center justify-content-center">
+        <SearchBar />
+      </header>
+      <main className="main-wrapper">
+        {props.display_images && <DisplayImages />}
+      </main>
+    </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => ({
+  display_images: state.image.display_images,
+});
+
+export default connect(mapStateToProps, {})(App);

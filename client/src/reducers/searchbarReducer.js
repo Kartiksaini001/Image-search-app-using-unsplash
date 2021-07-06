@@ -18,6 +18,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         query: action.payload,
+        page_num: 1,
       };
     default:
       return state;

@@ -8,6 +8,7 @@ import {
 const initialState = {
   loading: false,
   loading_more: false,
+  display_images: false,
   images: [],
   total_results: 0,
 };
@@ -21,10 +22,9 @@ export default (state = initialState, action) => {
         images: action.payload.results,
         total_results: action.payload.total,
         loading: false,
+        display_images: true,
       };
     case LOAD_MORE:
-      // let new_images = state.images;
-      // console.log(new_images, action.payload.results);
       const new_images = state.images.concat(action.payload.results);
       return {
         ...state,

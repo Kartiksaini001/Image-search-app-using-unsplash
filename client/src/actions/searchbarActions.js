@@ -1,7 +1,6 @@
 import { UPDATE_QUERY, INCREMENT_PAGE } from "./types";
 
 export const updateQuery = (query) => (dispatch) => {
-  dispatch(incrementPage());
   dispatch({
     type: UPDATE_QUERY,
     payload: query,
