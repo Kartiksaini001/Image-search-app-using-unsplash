@@ -41,13 +41,22 @@ html {
   color: rgba(66, 66, 66, 0.5);
 }
 
-.search-btn {
+.custom-btn {
   background-color: var(--theme-dark);
   color: white;
-  width: 11%;
-  font-size: 21px;
   border-radius: 6px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.search-btn {
+  width: 11%;
+  font-size: 21px;
+}
+
+.load-more-btn {
+  height: 50px;
+  width: 150px;
+  /* font-size: 17px; */
 }
