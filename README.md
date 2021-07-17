@@ -4,4 +4,4 @@ Image Search Engine using Unsplash API. Checkout the website from [here](https:/
 
 ### Demo
 
-![Website Demo GIF](https://github.com/Kartiksaini001/Image-search-app-using-unsplash/tree/master/demo/demo.gif)
+![Website Demo GIF](https://github.com/Kartiksaini001/Image-search-app-using-unsplash/blob/master/demo/demo.gif)
